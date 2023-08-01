@@ -1,0 +1,10 @@
+root = true
+
+[*.{js,css,html}]
+indent_style = space
+indent_size = 2
+
+
+[{package.json}]
+indent_style = space
+indent_size = 2
