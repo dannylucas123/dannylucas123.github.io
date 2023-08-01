@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="./index.css">
   
   <title>Frontend Mentor | Newsletter sign-up form with success message</title>
 
@@ -12,35 +13,71 @@
   <style>
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
+    body {
+      color: white;
+      margin: 0;
+    }
   </style>
 </head>
 <body>
-
+  <!-- <img src="./assets/images/icon-list.svg" />
+  <img src="./assets/images/icon-success.svg" /> -->
+  <!-- <img src="./assets/images/illustration-sign-up-desktop.svg" /> -->
+  <!-- <img src="./assets/images/illustration-sign-up-mobile.svg" /> -->
   <!-- Sign-up form start -->
+    <div class="content active">
+      <div class="grid">
 
-  Stay updated!
+        <div class="grid1">
+          <div class="grid1-content">
+            <h1>  Stay updated!</h1>
 
-  Join 60,000+ product managers receiving monthly updates on:
+            <p>  Join 60,000+ product managers receiving monthly updates on:</p>
 
-  Product discovery and building what matters
-  Measuring to ensure updates are a success
-  And much more!
+            <ul>
+              <li><div>Product discovery and building what matters</div></li>
+              <li><div>Measuring to ensure updates are a success</div></li>
+              <li><div>And much more!</div></li>
+            </ul>
 
-  Email address
+            <form>
+              <label>
+                <div>Email address</div>
+                <input placeholder="email@company.com"/>
+              </label>
+              <button>Subscribe to monthly newsletter</button>
+            </form>
+          </div>
+        </div>
+
+        <div class="grid2">
+          <img src="./assets/images/illustration-sign-up-desktop.svg" />
+        </div>
+      </div>
+
+      <div class="content">
+
+
+      </div>
+    </div>
+
+
+
+  <!-- Email address
   email@company.com
 
   Subscribe to monthly newsletter
 
-  <!-- Sign-up form end -->
+  Sign-up form end 
 
-  <!-- Success message start -->
+  Success message start 
 
   Thanks for subscribing!
 
   A confirmation email has been sent to ash@loremcompany.com. 
   Please open it and click the button inside to confirm your subscription.
 
-  Dismiss message
+  Dismiss message -->
 
   <!-- Success message end -->
   

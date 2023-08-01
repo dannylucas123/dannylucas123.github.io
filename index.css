@@ -40,6 +40,11 @@ body .container .heading {
   height: 200px;
 }
 
+.grid2 .container {
+  display: flex;
+  height: 100%;
+}
+
 .flex-column {
   display: flex;
   flex-direction: column;
@@ -112,4 +117,20 @@ body .container .heading {
 
 [role=tablist] button.active-tab-button {
   border-bottom: 1px solid var(--clr-white);
+}
+
+.panel {
+  display: none;
+  margin: 1rem auto;
+}
+
+.panel.active-panel {
+  display: block;
+  flex-grow: 1;
+}
+
+iframe {
+  all:unset;
+  width: 100%;
+  height: 100%;
 }
