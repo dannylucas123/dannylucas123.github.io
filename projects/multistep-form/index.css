@@ -1,0 +1,114 @@
+@import './css/orbs.css';
+@import './css/button.css';
+
+@font-face {
+  font-family: Ubuntu-Bold;
+  src: url(./assets/fonts/Ubuntu-Bold.ttf);
+}
+
+@font-face {
+  font-family: Ubuntu-Medium;
+  src: url(./assets/fonts/Ubuntu-Medium.ttf);
+}
+
+@font-face {
+  font-family: Ubuntu-Regular;
+  src: url(./assets/fonts/Ubuntu-Regular.ttf);
+}
+
+:root {
+  --clr-border: #534D93;
+  --clr-step-border: #BEE1FF;
+  --clr-background-selected-step: #BEE1FF;
+  --clr-background-highlighted: #F8F9FE;
+  --clr-background: #FFFFFF;
+  --clr-background-secondary: #EDF4FE;
+  --clr-button: #02255B;
+  --clr-text-gray: #A4A5A9;
+  --clr-text-heading: #02255B;
+
+  --clr-button-dull-border:  	hsl(228, 3%, 80%);
+
+  --ff-regular: Ubuntu-Regular;
+  --ff-bold: Ubuntu-Bold;
+  --ff-medium: Ubuntu-Medium;
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  font-family: var(--ff-regular);
+}
+
+body, .main-container, main, .wrapper {
+  height: 100dvh;
+}
+
+.page {
+  height: inherit;
+  display: flex;
+  flex-direction: column;
+}
+
+.stepper {
+  background-image: url(assets/images/bg-sidebar-mobile.svg);
+  height: 172px;
+}
+
+.stepper-wrapper {
+  justify-content: center;
+  gap: 1rem;
+  display: flex;
+}
+
+.content {
+  background-color: var(--clr-background-secondary);
+  flex-grow: 1;
+  justify-content: center;
+  display: none;
+}
+
+.content.active {
+  display: flex;
+}
+
+.content-wrapper {
+  border-radius: 15px;
+  width: 80%;
+  background-color: var(--clr-background);
+  height: fit-content;
+  padding: 1.5rem;
+  margin-top: -4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+h1 {
+  font-family: var(--ff-medium);
+  font-size: 1.7rem;
+}
+
+footer {
+  display: flex;
+  justify-content: end;
+  padding: 1rem;
+}
+
+p {
+  color: var(--clr-text-gray);
+  font-size: 1.1rem;
+}
+
+input {
+  padding: 0.5rem;
+}
+
+label {
+  padding: 0.5rem 0;
+  flex-direction: column;
+  display: flex;
+  font-size: 0.9rem;
+}

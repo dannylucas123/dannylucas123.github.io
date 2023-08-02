@@ -1,0 +1,44 @@
+
+.step-orb {
+  margin-top: 2rem;
+  height: 30px;
+  width: 30px;
+  border-radius: 25px;
+  border: 1px solid var(--clr-step-border);
+}
+
+.step-orb::after {
+  content: '1';
+  height: 30px;
+  width: 30px;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  flex-direction: column;
+  font-weight: 600;
+  color: #F2F7FF;
+}
+
+.step-orb-1::after {
+  content: '1';
+}
+
+.step-orb-2::after {
+  content: '2';
+}
+
+.step-orb-3::after {
+  content: '3';
+}
+
+.step-orb-4::after {
+  content: '4';
+}
+
+.step-orb.activated {
+  background-color: var(--clr-background-selected-step);
+}
+
+.step-orb.activated::after {
+  color: var(--clr-text-heading);
+}

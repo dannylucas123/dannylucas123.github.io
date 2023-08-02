@@ -1,0 +1,35 @@
+button {
+  all:unset;
+}
+
+button.plan-button {
+  border: 1px solid var(--clr-button-dull-border);
+  padding:1rem;
+  border-radius: 6px;
+  display: flex;
+  gap: 1rem;
+  color: var(--clr-text-gray);
+}
+
+button.plan-button:hover, button.plan-button:focus {
+  background-color: var(--clr-background-selected-step);
+  border: 1px solid var(--clr-button);
+  cursor: pointer;
+}
+
+button.plan-button b {
+  color: var(--clr-text-heading);
+}
+
+button.primary {
+  cursor: pointer;
+  background: var(--clr-button);
+  color: var(--clr-background);
+  font-family: var(--ff-medium);
+  border-radius: 5px;
+  padding: 10px;
+}
+
+button.primary:hover, button.primary:focus {
+  filter: brightness(45%);
+}
