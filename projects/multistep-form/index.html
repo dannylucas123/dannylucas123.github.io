@@ -6,6 +6,7 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
   <link rel="stylesheet" href="./index.css">
+  <script src="index.js"></script>
   
   <title>Frontend Mentor | Multi-step form</title>
 
@@ -77,9 +78,14 @@
                 </div>
               </button>
               <div class="billing-length">
-
-                Monthly
-                Yearly
+                <span>
+                  Monthly
+                  <div class="switch">
+                    <input type="checkbox" onclick="toggleSwitch(event)" autocomplete="off">
+                    <span class="slider"></span>
+                  </div>
+                  Yearly
+                </span> 
               </div>
             </div>
           </div>

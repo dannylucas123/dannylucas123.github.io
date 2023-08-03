@@ -1,5 +1,6 @@
 @import './css/orbs.css';
 @import './css/button.css';
+@import './css/switch.css';
 
 @font-face {
   font-family: Ubuntu-Bold;
@@ -112,3 +113,14 @@ label {
   display: flex;
   font-size: 0.9rem;
 }
+
+.billing-length {
+  color: var(--clr-text-gray);
+}
+
+.billing-length > span {
+  display: flex;
+  padding: 0 1rem;
+  gap: 1rem;
+  justify-content: center;
+} 
