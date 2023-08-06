@@ -6,7 +6,7 @@ const state = {
 };
 
 const prices = [9, 12, 15];
-
+const addonPrices = [1, 2, 3];
 
 const monthlyPrices = ['$9/mo', '$12/mo', '$15/mo'];
 const yearlyPrices = ['$90/y', '$120/y', '$150/y'];
@@ -26,8 +26,15 @@ const setPriceSelectors = () => {
   document.querySelectorAll('.plan-button .price').forEach((ele, index) => ele.innerHTML = state.planType ? yearlyPrices[index] : monthlyPrices[index]);
 }
 
-const updateAddon = (selected) => {
+const setAddonPrice = () => {
+  document.querySelectorAll('.addon-price div').forEach((ele, index) => {
+    let price = addonPrices[index];
+    ele.innerHTML = `+$${state.planType ? price * 10 : price}/${state.planType ? 'yr' : 'mo'}`;
+  });
+}
 
+const updateAddons = () => {
+  document.querySelectorAll('.addon-selector').forEach((ele, index) => updateElement(ele, state.addons.includes(index), 'selected'));
 }
 
 const updateSwitch = () => {
@@ -50,6 +57,7 @@ const renderUpdates = () => {
   updateText();
   updateSelectedPricePlan();
   setPriceSelectors();
+  setAddonPrice();
 };
 
 const togglePricePlan = (priceplan) => {
@@ -62,9 +70,19 @@ const toggleSwitch = (event) => {
   renderUpdates();
 };
 
+toggleAddon = (selected) => {
+  if (state.addons.includes(selected)) {
+    state.addons = state.addons.filter(e => e !== selected);
+  } else {
+    state.addons.push(selected);
+  }
+  updateAddons();
+}
+
 const navigate = () => {
   updateElement(document.getElementById('previous'), state.step < 1, 'hidden');
   updateElement(document.getElementById('next'), state.step > 2, 'hidden');
+  updateElement(document.getElementById('confirm'), state.step !== 3, 'hidden');
   updateElement(document.getElementById('content-personal'), state.step === 0, 'active');
   updateElement(document.getElementById('step-orb-1'), state.step === 0, 'activated');
   updateElement(document.getElementById('content-billing'), state.step === 1, 'active');
@@ -72,7 +90,8 @@ const navigate = () => {
   updateElement(document.getElementById('content-addons'), state.step === 2, 'active');
   updateElement(document.getElementById('step-orb-3'), state.step === 2, 'activated');
   updateElement(document.getElementById('content-finish'), state.step === 3, 'active');
-  updateElement(document.getElementById('step-orb-4'), state.step === 3, 'activated');
+  updateElement(document.getElementById('step-orb-4'), state.step >= 3, 'activated');
+  updateElement(document.getElementById('content-done'), state.step === 4, 'active');
 }
 
 const navigateForward = () => {

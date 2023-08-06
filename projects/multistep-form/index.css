@@ -92,6 +92,7 @@ body, .main-container, main, .wrapper {
 }
 
 h1 {
+  color: var(--clr-text-heading);
   font-family: var(--ff-medium);
   font-size: 1.7rem;
 }
@@ -155,4 +156,19 @@ label {
 .free {
   font-size: 0.8rem;
   color: var(--clr-button);
+}
+
+#content-done {
+  text-align: center;
+}
+
+#content-done img {
+  height: 55px;
+  padding: 1rem;
+  padding-top: 3rem;
+}
+
+#content-done p {
+  padding-bottom: 2rem;
+  font-size: 1rem;
 }
