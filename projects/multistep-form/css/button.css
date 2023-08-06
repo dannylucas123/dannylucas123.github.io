@@ -9,12 +9,12 @@ button.plan-button {
   display: flex;
   gap: 1rem;
   color: var(--clr-text-gray);
+  cursor: pointer;
 }
 
-button.plan-button:hover, button.plan-button:focus {
+button.plan-button:hover, button.plan-button:focus, button.plan-button.selected {
   background-color: var(--clr-background-selected-step);
   border: 1px solid var(--clr-button);
-  cursor: pointer;
 }
 
 button.plan-button b {

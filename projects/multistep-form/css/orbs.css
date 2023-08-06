@@ -19,19 +19,19 @@
   color: #F2F7FF;
 }
 
-.step-orb-1::after {
+#step-orb-1::after {
   content: '1';
 }
 
-.step-orb-2::after {
+#step-orb-2::after {
   content: '2';
 }
 
-.step-orb-3::after {
+#step-orb-3::after {
   content: '3';
 }
 
-.step-orb-4::after {
+#step-orb-4::after {
   content: '4';
 }
 

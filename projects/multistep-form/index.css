@@ -1,6 +1,7 @@
 @import './css/orbs.css';
 @import './css/button.css';
 @import './css/switch.css';
+@import './css/addons-page.css';
 
 @font-face {
   font-family: Ubuntu-Bold;
@@ -27,6 +28,7 @@
   --clr-button: #02255B;
   --clr-text-gray: #A4A5A9;
   --clr-text-heading: #02255B;
+  --clr-background-checkbox: #473FFF;
 
   --clr-button-dull-border:  	hsl(228, 3%, 80%);
 
@@ -56,6 +58,8 @@ body, .main-container, main, .wrapper {
 .stepper {
   background-image: url(assets/images/bg-sidebar-mobile.svg);
   height: 172px;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .stepper-wrapper {
@@ -94,8 +98,23 @@ h1 {
 
 footer {
   display: flex;
-  justify-content: end;
   padding: 1rem;
+}
+
+footer #next {
+  margin-left: auto;
+}
+
+footer #previous {
+  background: none;
+  border: none;
+  margin: auto auto auto 0;
+  color: var(--clr-text-gray);
+  font-size: 0.8rem;
+}
+
+footer #previous:hover {
+  filter: brightness(30%);
 }
 
 p {
@@ -124,3 +143,16 @@ label {
   gap: 1rem;
   justify-content: center;
 } 
+
+.highlight {
+  color: var(--clr-button);
+}
+
+.hidden {
+  display: none;
+}
+
+.free {
+  font-size: 0.8rem;
+  color: var(--clr-button);
+}

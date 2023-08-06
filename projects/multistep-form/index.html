@@ -26,13 +26,13 @@
         <div class="page">
           <div class="stepper">
             <div class="stepper-wrapper">
-              <div class="step-orb step-orb-1 activated"></div>
-              <div class="step-orb step-orb-2"></div>
-              <div class="step-orb step-orb-3"></div>
-              <div class="step-orb step-orb-4"></div>
+              <div id="step-orb-1" class="step-orb activated"></div>
+              <div id="step-orb-2" class="step-orb"></div>
+              <div id="step-orb-3" class="step-orb"></div>
+              <div id="step-orb-4" class="step-orb"></div>
             </div>
           </div>
-          <div id="content-personal" class="content">
+          <div id="content-personal" class="content ">
             <div class="content-wrapper">
               <h1>Personal info</h1>
               <p>Please provide your name, email address, and phone number.</p>
@@ -52,45 +52,107 @@
               </form>
             </div>
           </div>
-          <div id="content-billing" class="content active">
+          <div id="content-billing" class="content">
             <div class="content-wrapper">
               <h1>Select your plan</h1>
               <p>You have the option of monthly or yearly billing.</p>
-              <button class="plan-button">
+              <button id="plan-arcade" class="plan-button" onclick="togglePricePlan(0)">
                 <img src="./assets/images/icon-arcade.svg" aria-hidden="true"/>
                 <div>
                   <b>Arcade</b>
-                  <div>$9/mo</div>
+                  <div class="price">$9/mo</div>
+                  <div class="free hidden">2 months free</div>
                 </div>
               </button>
-              <button class="plan-button">
+              <button id="plan-advanced" class="plan-button" onclick="togglePricePlan(1)">
                 <img src="./assets/images/icon-advanced.svg"  aria-hidden="true"/>
                 <div>
                   <b>Advanced</b>
-                  <div>$12/mo</div>
+                  <div class="price">$12/mo</div>
+                  <div class="free hidden">2 months free</div>
                 </div>
               </button>
-              <button class="plan-button">
+              <button id="plan-pro" class="plan-button" onclick="togglePricePlan(2)">
                 <img src="./assets/images/icon-pro.svg"  aria-hidden="true"/>
                 <div>
                   <b>Pro</b>
-                  <div>$15/mo</div>
+                  <div class="price">$15/mo</div>
+                  <div class="free hidden">2 months free</div>
                 </div>
               </button>
               <div class="billing-length">
                 <span>
-                  Monthly
+                  <div id="monthly" class="highlight">Monthly</div>
                   <div class="switch">
                     <input type="checkbox" onclick="toggleSwitch(event)" autocomplete="off">
                     <span class="slider"></span>
                   </div>
-                  Yearly
+                  <div id="yearly">Yearly</div>
                 </span> 
               </div>
             </div>
           </div>
+          <div id="content-addons" class="content active">
+            <div class="content-wrapper">
+              <h1>Pick add-ons</h1>
+              <p>Add-ons help enhance your gaming experience.</p>
+              <button class="addon-selector">
+                <div class="checkbox-wrapper">
+                  <input type="checkbox" autocomplete="off"/>
+                </div>
+                <div class="explanation">
+                  <div class="addon-selector-explanation-wrapper">
+                    <span class="top">Online service</span>
+                    <span class="bottom">Access to multiplayer games</span>
+                  </div>
+                </div>
+                <div class="addon-price">
+                  <div>
+                    +1$ p/m
+                  </div>
+                </div>
+              </button>
+              <button class="addon-selector">
+                <div class="checkbox-wrapper">
+                  <input type="checkbox" autocomplete="off"/>
+                </div>
+                <div class="explanation">
+                  <div class="addon-selector-explanation-wrapper">
+                    <span class="top">Larger storage</span>
+                    <span class="bottom">Extra 1TB of cloud save</span>
+                  </div>
+                </div>
+                <div class="addon-price">
+                  <div>
+                    +2$ p/m
+                  </div>
+                </div>
+              </button>
+              <button class="addon-selector">
+                <div class="checkbox-wrapper">
+                  <input type="checkbox" autocomplete="off"/>
+                </div>
+                <div class="explanation">
+                  <div class="addon-selector-explanation-wrapper">
+                    <span class="top">Customizable profile</span>
+                    <span class="bottom">Custom theme on your profile</span>
+                  </div>
+                </div>
+                <div class="addon-price">
+                  <div>
+                    +3$ p/m
+                  </div>
+                </div>
+              </button>
+              
+            </div>
+          </div>
+          <div id="content-finish" class="content">
+
+          </div>
           <footer>
-            <button class="primary">Next Step</button>
+            <button id="previous" onclick="navigateBack()" class="primary hidden">Previous Step</button>
+            <button id="next" onclick="navigateForward()" class="primary">Next Step</button>
           </footer>
         </div>
 
